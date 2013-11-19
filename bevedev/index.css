@@ -1,0 +1,65 @@
+body {
+  background: url("agsquare.png");
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 33px;
+  padding: 0 10px;
+}
+
+p {
+  padding: 0 15px;
+  font-size: 18px;
+}
+
+fieldset {
+  min-height: 10px;
+  border-radius: 5px;
+}
+
+fieldset legend {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+fieldset legend:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+fieldset h1 {
+  font-size: 20px;
+  text-decoration: none;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+fieldset input {
+  margin-left: 15px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  height: 20px;
+}
+
+input.focus {
+  border-radius: 3px;
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+  outline: 0;
+}
+
+fieldset textarea {
+  border-radius: 3px;
+}
+
+textarea.focus {
+  border-radius: 3px;
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+  outline: 0;
+}
+
+fieldset input, fieldset h1, fieldset label, fieldset textarea {
+  display: none;
+}
