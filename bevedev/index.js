@@ -1,11 +1,15 @@
 $(function() {
   $("fieldset legend").on("click", function() {
-    $(this).siblings("h1, input, label, textarea").toggle("slow");
     if($(this).children("span").text() == "+") {
       $(this).children("span").text("-");
+      $(this).siblings("h1, input, label, textarea").fadeIn();
+      $("h1 input").fadeIn();
     }
     else {
       $(this).children("span").text("+");
+      $(this).siblings("h1, input, label, textarea").fadeOut();
+      $("h1 input").fadeOut();
+
     }
   });
 
