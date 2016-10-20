@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quinn Packing</title>
+    <link rel="stylesheet" media="all" href="css/skeleton.css" />
+    <link rel="stylesheet" media="all" href="css/normalize.css" />
+    <link rel="stylesheet" media="all" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" media="all" href="css/main.css" />
+    <script type="text/javascript" src="javascript/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+  </head>
+  <body>
+    <header class="">
+      <div class="top_menu">
+        <div class="container">
+          <ul>
+            <li>Welcome, Nelio Carneiro</li>
+            <li>
+              <i class="fa fa-envelope">&nbsp;</i>
+              Inbox
+            </li>
+            <li>
+              <i class="fa fa-user">&nbsp;</i>
+              Account
+            </li>
+            <li>
+              <i class="fa fa-sign-out">&nbsp;</i>
+              Logout
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container logo">
+        <div class="row">
+          <p class="image_logo"><img src="images/Quinn_Packaging.png" alt="Quinn_Packaging" /></p>
+          <p class="tel_number">+353 49 9525650 <br /> Call us today</p>
+          <i class="fa fa-phone">&nbsp;</i>
+        </div>
+      </div>
+
+    </header>
+
+    <section class="main_menu">
+      <div class="container">
+        <div class="row">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Innovation</a></li>
+            <li><a href="#">Client Portfolio</a></li>
+            <li><a href="#">Quality</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+
+          <div class="twelve columns image_div">
+            <img class="twelve columns" src="images/banner.jpg" alt="banner" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="middle">
+      <div class="container">
+        <p id="inbox"><a href="#">Inbox</a></p>
+
+        <div class="row">
+          <div class="three columns received">
+            <ul>
+              <li class="selected"><i class="fa fa-suitcase">&nbsp;</i>Received</li>
+              <li><i class="fa fa-folder">&nbsp;</i>Not Opened</li>
+            </ul>
+
+            <ul>
+              <li class="selected">Company</li>
+              <li>Quinn Test</li>
+            </ul>
+
+            <ul>
+              <li class="selected">Document Type</li>
+              <li>Invoice</li>
+            </ul>
+          </div>
+
+          <div class="nine columns">
+            <input id="search_box" type="text" placeholder="Search by ID" />
+          </div>
+
+          <div id="div_table" class="nine columns">
+            <table class="nine columns">
+              <thead>
+                <th><input type="checkbox" id="check_all" /></th>
+                <th>Avatar</th>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+              </thead>
+              <tbody id="table_body">
+              </tbody>
+            </table>
+          </div>
+
+          <div class="nine columns middle_footer">
+            <p class="two columns"><button id="button_delete">Delete</button></p>
+            <p class="five columns message">You have <span id="counter">no</span> users selected</p>
+            <p class="pages">Page:
+              <select id="pages">
+              </select>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>Copyright 2016 Quinn Packaging | All Rights Reserved | Created by SugarProjects</p>
+      </div>
+    </footer>
+  </body>
+</html>

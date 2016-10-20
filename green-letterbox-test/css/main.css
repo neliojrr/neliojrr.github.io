@@ -1,0 +1,202 @@
+header .top_menu {
+  height: 25px;
+  width: 100%;
+  background-color: #005b94;
+  padding: 15px;
+}
+
+header .top_menu ul {
+  float: right;
+  list-style: none;
+}
+
+header .top_menu ul li {
+  display: inline;
+  margin-left: 10px;
+  color: #aaaaaa;
+  font-family: "Open Sans",sans-serif;
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+header .top_menu ul li+li {
+  color: white;
+  border-left: 1px solid #aaaaaa;
+}
+
+header .logo {
+  margin-top: 30px;
+}
+
+header .logo .image_logo {
+  float: left;
+}
+
+header .logo i {
+  float: right;
+  font-size: 50px;
+  color: #005b94;
+}
+
+header .logo .tel_number {
+  float: right;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #1e1e1e;
+}
+
+footer p {
+  color: #BFBFBF;
+  font-size: 12px;
+  font-family: 'Open Sans';
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+section.main_menu {
+  margin-top: 20px;
+}
+
+section.main_menu .container {
+  background-color: #005b94;
+}
+
+section.main_menu ul {
+  background-color: #005B94;
+  list-style: none;
+  text-align: center;
+  height: 25px;
+}
+
+section.main_menu ul li {
+  position: relative;
+  top: 11px;
+  display: inline;
+  padding: 12px;
+  margin-right: 10px;
+}
+
+section.main_menu ul li a {
+  font-family: 'Open Sans';
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+section.main_menu ul li:hover {
+  border-top: 2px solid white;
+}
+
+section.main_menu .image_div img {
+  height: 200px;
+}
+
+
+section.middle {
+  margin-top: 20px;
+}
+
+section.middle p#inbox a {
+  font-family: "Open Sans",sans-serif;
+  font-size: 13px;
+  color: #005b94;
+  text-decoration: none;
+}
+
+section.middle p#inbox a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+section.middle .row {
+  margin-top: -15px;
+}
+
+section.middle .received {
+}
+
+section.middle .received ul {
+  border: 1px solid #ddd;
+  list-style: none;
+  border-radius: 5px;
+}
+
+section.middle .received ul li {
+  padding: 10px;
+  padding-left: 15px;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+section.middle .received ul li+li {
+  margin-top: 1px;
+  border-radius: 0 0 5px 5px;
+}
+
+section.middle .received ul li i {
+  margin-right: 8px;
+}
+
+section.middle .received ul li:hover {
+  background-color: #005b94;
+  color: white;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #005b94;
+  color: white;
+}
+
+#search_box {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#search_icon:hover {
+  cursor: pointer;
+}
+
+#div_table {
+  margin-top: 20px;
+}
+
+#div_table table {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+#div_table table thead tr th {
+  text-align: center;
+  padding: 10px;
+}
+
+#div_table table tbody tr td {
+  text-align: center;
+  padding: 10px;
+}
+
+.img_avatar {
+  height: 30px;
+  width: 30px;
+}
+
+#button_delete:hover {
+  background-color: red;
+  color: white;
+}
+
+p.message {
+  margin-top: 7px;
+}
+
+.pages {
+  float: right;
+}
