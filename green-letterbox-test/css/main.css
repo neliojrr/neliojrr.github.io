@@ -164,7 +164,7 @@ section.middle .received ul li:hover {
   cursor: pointer;
 }
 
-#div_table {
+#link_see_all {
   margin-top: 20px;
 }
 
@@ -199,4 +199,8 @@ p.message {
 
 .pages {
   float: right;
+}
+
+#create_form {
+  display: none;
 }

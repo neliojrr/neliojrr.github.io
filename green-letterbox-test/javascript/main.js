@@ -50,7 +50,41 @@ $(function() {
   $(document.body).on("change", "#pages", function() {
     list_users($(this).val());
   });
+
+  $("#new_user").on("click", function() {
+    $("#create_form").toggle("slow");
+  });
+
+  // POST - create user
+  $("#create_user").on("click", function() {
+    var name = $("#name").val();
+    var job = $("#job").val();
+
+    create_user(name, job);
+  });
 });
+
+function create_user(name, job) {
+  $.ajax({
+    url: "http://reqres.in/api/users",
+    type: "POST",
+    data: {
+      name: name,
+      job: job
+    },
+    success: function(response) {
+      console.log(response);
+      alert("The user was create!\nName: " + response.name + "\nJob: " + response.job + "\nID: " + response.id + "\nCreatedAt: " + response.createdAt);
+      $("#name").val("");
+      $("#job").val("");
+      $("#create_form").hide("slow");
+    },
+    error: function(error) {
+      alert("Unfortunelly it wasn't possible to create the users");
+      console.log("The error: " + error);
+    }
+  });
+}
 
 function list_users(page) {
   $.ajax({
@@ -77,7 +111,7 @@ function list_users(page) {
       }
     },
     error: function(error) {
-      alert("Unfortunelly it wasn't possible list the users");
+      alert("Unfortunelly it wasn't possible to list the users");
       console.log("The error: " + error);
     }
   });
