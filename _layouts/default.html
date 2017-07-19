@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main">
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="books.html">Books</a></li>
+        </ul>
+        <hr class="top"></hr>
 
-    </head>
-    <body>
+        {{ content }}
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+        <hr class="top"></hr>
+        <ul class="social_links">
+          <li><a href="http://twitter.com/neliojrr"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="http://github.com/neliojrr"><i class="fa fa-github"></i></a></li>
+          <li><a href="http://medium.com/@neliojrr"><i class="fa fa-medium"></i></a></li>
+          <li><a href="http://facebook.com/neliojrr"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="http://instagram.com/neliojrr"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/nelio-carneiro-6b323025/"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
 
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Nelio Carneiro<br />
-                Software Developer<br />
-                neliojrr@gmail.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/neliojrr">github</a><br />
-                <a href="https://twitter.com/neliojrr">twitter</a><br />
-                <a href="https://flickr.com/neliojrr">flickr</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
