@@ -16,10 +16,14 @@ comments: true
 <div class="share">
   <p>
     Share:
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://nelio.me{{ page.url }}" target="_blank">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://nelio.me{{ page.url }}"
+      onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+      target="_blank" title="Share on Facebook">
       <i class="fa fa-facebook-official"></i>
     </a>
-    <a href="http://twitter.com/share?text=I just read {{ page.title }} by @neliojrr&url=http://nelio.me{{ page.url }}" target="_blank">
+    <a href="http://twitter.com/share?text=I just read {{ page.title }} by @neliojrr&url=http://nelio.me{{ page.url }}"
+      onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+      target="_blank">
       <i class="fa fa-twitter-square"></i>
     </a>
   </p>
