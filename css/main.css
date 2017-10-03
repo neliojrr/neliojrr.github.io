@@ -359,6 +359,16 @@ div.share p i.fa-twitter-square {
   color: #309EDB;
 }
 
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 0px;
+  padding: 0.5em 20px;
+  quotes: "\201C""\201D""\2018""\2019";
+  color: rgba(0,0,0,.68);
+  font-style: italic;
+}
+
 
 /*****************************************************************************/
 /*
