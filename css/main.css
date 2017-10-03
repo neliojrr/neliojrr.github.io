@@ -14,14 +14,10 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
+  font-family: Helvetica, Arial, sans-serif;
   text-align: center;
   min-height: 100vh;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
@@ -35,9 +31,49 @@ a:visited { color: #a0a; }
   width: 100%;
 }
 
+@media screen and (min-width: 348px) and (max-width: 699px) {
+  .main {
+    width: 348px;
+  }
+
+  ul.menu li a {
+    font-size: 18px;
+  }
+
+  ul.social_links li a {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .main {
+    width: 764px;
+  }
+
+  ul.menu li a {
+    font-size: 15px;
+  }
+
+  ul.social_links li a {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .main {
+    width: 764px;
+  }
+
+  ul.menu li a {
+    font-size: 15px;
+  }
+
+  ul.social_links li a {
+    font-size: 20px;
+  }
+}
+
 .main {
-  max-width: 100%;
-  width: 37rem;
   padding: 1.25rem 1rem;
   margin: auto;
 }
@@ -102,7 +138,6 @@ ul.social_links li {
 
 ul.social_links li a {
   color: #CCCCCC;
-  font-size: 20px;
 }
 
 ul.social_links li a:hover {
@@ -163,6 +198,167 @@ ul.social_links li a:hover {
   margin-top: 1.125rem;
   margin-bottom: 1.125rem;
 }
+
+/*****************************************************************************/
+/*
+/* Blog Menu
+/*
+/*****************************************************************************/
+
+
+@media screen and (min-width: 348px) and (max-width: 699px) {
+  div.page_title h1 {
+    font-size: 28px;
+  }
+
+  div.page_title h2 {
+    font-size: 20px;
+  }
+
+  h3.post_section {
+    width: 50%;
+    margin: auto;
+  }
+
+  li.post_title {
+    text-align: center;
+  }
+}
+
+
+@media screen and (min-width: 700px) {
+  div.page_title h1 {
+    font-size: 42px;
+  }
+
+  div.page_title h2 {
+    font-size: 24px;
+  }
+
+  h3.post_section {
+    width: 200px;
+  }
+
+  li.post_title {
+    text-align: left;
+  }
+}
+
+div.page_title {
+  margin-top: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #474747;
+}
+
+div.page_title h1 {
+  letter-spacing: 0.4rem;
+  margin-bottom: 10px;
+}
+
+div.page_title h2 {
+  margin-bottom: 10px;
+}
+
+div.month_group {
+  margin-bottom: 40px;
+}
+
+h3.post_section {
+  background-color: #F14207;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: bold;
+  color: white;
+  padding: 0.25em 0.5em;
+  margin-bottom: 0.75em;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
+
+ul.posts_list {
+  list-style: none;
+}
+
+li.post_title {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+li.post_title a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #171819;
+  text-decoration: none;
+  line-height: 1.2;
+  font: normal 1.25em/1.5 "PT Serif", Cambria, Georgia, Times, "Times New Roman", serif;
+}
+
+li.post_title a:hover {
+  text-decoration: underline;
+}
+
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+div.post_page {
+  font-family: "PT Serif", Cambria, Georgia, Times, "Times New Roman", serif;
+  text-align: left;
+  color: #202020;
+  text-rendering: optimizelegibility;
+}
+
+h2.post_title {
+  font-size: 1.8em;
+}
+
+div.post_text {
+  line-height: 1.68em;
+  font-size: 1.2em;
+}
+
+hr.bottom_post {
+  position: relative;
+  width: 100%;
+  left: -15px;
+  padding: 0;
+  border: 0;
+  height: 1.625rem;
+  line-height: 1.625rem;
+  display: inline-block;
+  background-color: #CCCCCC;
+  content: '';
+  height: 1px;
+  vertical-align: middle;
+  margin-top: 2.125rem;
+  margin-bottom: 2.125rem;
+  margin-left: 0;
+  text-align: center;
+}
+
+div.share {
+  text-align: left;
+  font-size: 1.2em;
+  font-family: "PT Serif", Cambria, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+}
+
+
+div.share p i {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+div.share p i.fa-facebook-official {
+  color: #4267b2;
+}
+
+div.share p i.fa-twitter-square {
+  color: #309EDB;
+}
+
 
 /*****************************************************************************/
 /*
