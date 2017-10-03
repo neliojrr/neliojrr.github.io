@@ -346,9 +346,10 @@ div.share {
 }
 
 
-div.share p i {
+div.share p a {
   font-size: 30px;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 div.share p i.fa-facebook-official {
