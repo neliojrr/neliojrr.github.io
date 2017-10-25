@@ -30,7 +30,7 @@ disqus_shortname:   nelio
 
 # Social
 # if you don't have any of social below, comment the line.
-#google:
+google:
   #plus:            #username
   analytics:        UA-36204274-8
   #verify:
