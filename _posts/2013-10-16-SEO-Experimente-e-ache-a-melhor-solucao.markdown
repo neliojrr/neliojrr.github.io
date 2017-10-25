@@ -2,6 +2,7 @@
 layout: post
 title:  "SEO: Experimente e ache a melhor solução"
 date:   2013-10-17 00:25:55
+permalink: /writing/:title
 ---
 
 Já há algum tempo venho estudando técnicas de SEO porque se fez necessário aplicá-las. Vou explicar:

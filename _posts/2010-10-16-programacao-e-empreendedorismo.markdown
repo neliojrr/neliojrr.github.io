@@ -2,6 +2,7 @@
 layout: post
 title:  "Programação e Empreendedorismo"
 date:   2010-10-16 00:25:55
+permalink: /writing/:title
 ---
 
 Ultimamente tem sido difícil não pensar em ‘Minha Empresa’. Tenho assistido a alguns vídeos (tem um do Vinícius Teles ótimo) e acessado sites (http://startupquote.com) relacionados a este tema e confesso estar cada vez mais certo deste pensamento. A verdade é que não me interessei nisso semana passada. Esse pensamento vem crescendo ao longo de vários meses. Tive um professor na minha graduação que sempre foi muito incentivador da criação de empresas, e como um grande admirador, ele teve sua parcela de culpa nesta minha nova empreitada.

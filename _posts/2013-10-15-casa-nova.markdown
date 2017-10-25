@@ -2,6 +2,7 @@
 layout: post
 title:  "Casa nova"
 date:   2013-10-15 23:25:55
+permalink: /writing/:title
 ---
 
 Já há tempos querendo reativar o blog, mas infelizmente não havia muitos assuntos interessantes para tratar, até hoje.
