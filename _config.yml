@@ -32,7 +32,7 @@ disqus_shortname:   nelio
 # if you don't have any of social below, comment the line.
 #google:
   #plus:            #username
-  #analytics:
+  analytics:        UA-36204274-8
   #verify:
   #ad-client:
   #ad-slot:
