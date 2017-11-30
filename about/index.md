@@ -80,5 +80,5 @@ in my life and has shaped my thinking towards helping others and on search for
 self improvent. I talked more about it 
 [here](https://medium.com/@neliojrr/o-trabalho-voluntario-esta-mudando-o-brasil-a800d5c9f292).
 
-Feel free to reach out to me on *email at nelio dot me* or on 
+Feel free to reach out to me on my [email](mailto:email@nelio.me) or on 
 [twitter](https://twitter.com/neliojrr).
