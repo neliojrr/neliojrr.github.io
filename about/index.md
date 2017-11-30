@@ -11,7 +11,7 @@ with more than 7 years of experience. Currently living in Warsaw, Poland.
 I'm graduated in Computer Science at 
 [University Federal of Goias](http://www.ufg.br).
 
-However, my story with computers has began a long time ago and I still remember it
+However, my history with computers has began a long time ago and I still remember it
 clearly when was that.
 The first time I saw a computer was with my father and he was playing Doom
 (yeah! that epic game) and I admit I got more scared than curious about
