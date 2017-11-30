@@ -68,7 +68,7 @@ Ended up that my role went more for the Frontend side which I'm fully responsibl
 right now. We make all the frontend with Javascript/ReactJS. We use PHP for
 backend and we run some background jobs in golang.
 
-I'm a really enthusiast of open source and I've been making some contributions.
+I'm a really enthusiastic of open source and I've been making some contributions.
 Mainly Ruby projects.
 
 I used to play acoustic guitar quite often and also basketball (I take it
