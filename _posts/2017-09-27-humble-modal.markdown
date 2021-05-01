@@ -5,6 +5,7 @@ tags: [reactjs, frontend, npm, programming, javascript]
 excerpt: "A simple and easy to use react modal component"
 date: 2017-09-27 00:25:55
 permalink: /:title
+redirect_from: /writing/humble-modal/
 comments: true
 ---
 

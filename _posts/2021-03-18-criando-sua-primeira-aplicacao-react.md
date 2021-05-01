@@ -5,6 +5,7 @@ tags: [reactjs, frontend, programação, javascript]
 excerpt: "Criar uma aplicação React nunca foi tão fácil"
 date: 2021-03-18 00:25:55
 permalink: /:title
+redirect_from: /writing/criando-sua-primeira-aplicacao-react/
 comments: true
 ---
 

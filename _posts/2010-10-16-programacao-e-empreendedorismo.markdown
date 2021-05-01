@@ -3,6 +3,7 @@ layout: post
 title: "Programação e Empreendedorismo"
 date: 2010-10-16 00:25:55
 permalink: /:title
+redirect_from: /writing/programacao-e-empreendedorismo/
 comments: true
 ---
 

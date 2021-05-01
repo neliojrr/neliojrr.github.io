@@ -3,6 +3,7 @@ layout: post
 title: "SEO: Experimente e ache a melhor solução"
 date: 2013-10-17 00:25:55
 permalink: /:title
+redirect_from: /writing/SEO-Experimente-e-ache-a-melhor-solucao/
 comments: true
 ---
 
