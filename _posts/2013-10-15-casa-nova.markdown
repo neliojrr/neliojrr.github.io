@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Casa nova"
+date: 2013-10-15 23:25:55
+permalink: /:title
+comments: true
+---
+
+Já há tempos querendo reativar o blog, mas infelizmente não havia muitos assuntos interessantes para tratar, até hoje.
+Tenho tido acumulado algumas experiências no meu trabalho e em minhas viagens, podendo agora compartilhá-las. Espero poder
+passar tudo de mais interessante que tenho aprendido e vivenciado sobre os assuntos que mais me interessam atualmente:
+**tecnologia** e **empreendedorismo**.
+
+A notícia triste é que o [posterous](http://posterous.com) - a melhor plataforma de blogs do universo - encerrou suas atividades.
+Mas, isso acabou se tornando uma ótima oportunidade de conhecer o [jekyll](http://jekyllrb.com/), uma plataforma open source
+criada por um dos fundadores do [github](http://github.com). Gostei bastante, principalmente pelo fato de usar markdown na
+escrita e também por poder hospedar no próprio [github](http://github.com/neliojrr/neliojrr.github.io).
+
+A próposito, usei o [Vim](http://vim.org) pra fazer esse post! <3
+
+É isso! :)

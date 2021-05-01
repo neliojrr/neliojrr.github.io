@@ -9,7 +9,8 @@
   <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
   <title>
     {% if page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{
-    site.title | escape }}{% endif %}
+      site.title | escape
+    }}{% endif %}
   </title>
   <link
     rel="alternate"
@@ -21,25 +22,21 @@
   <link
     rel="canonical"
     href="{{
-      page.url  | remove: 'index.html' | remove: '.html' | absolute_url
+      page.url | remove: 'index.html' | remove: '.html' | absolute_url
     }}"
   />
   {% if paginator.previous_page %}
   <link
     rel="prev"
     href="{{
-      paginator.previous_page_path
-        | remove: 'index.html'
-        | remove: '.html'
+      paginator.previous_page_path | remove: 'index.html' | remove: '.html'
     }}"
   />
   {% endif %} {% if paginator.next_page %}
   <link
     rel="next"
     href="{{
-      paginator.next_page_path
-        | remove: 'index.html'
-        | remove: '.html'
+      paginator.next_page_path | remove: 'index.html' | remove: '.html'
     }}"
   />
   {% endif %}
@@ -111,7 +108,7 @@
   <meta
     name="twitter:url"
     content="{{
-      page.url  | remove: 'index.html' | remove: '.html' | absolute_url
+      page.url | remove: 'index.html' | remove: '.html' | absolute_url
     }}"
   />
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
@@ -134,8 +131,8 @@
   {% endif %} {% feed_meta %}
   <link
     rel="apple-touch-icon"
-    sizes="180x180"
-    href="/assets/favicons/apple-touch-icon.png"
+    sizes="144x144"
+    href="/assets/favicons/apple-icon-144x144.png"
   />
   <link
     rel="icon"

@@ -2,12 +2,16 @@
   url: /
   external: false
 
-- title: archive
-  url: /archive/
+- title: arquivo
+  url: /arquivo/
   external: false
 
-- title: about
-  url: /about/
+- title: projetos
+  url: /projetos/
+  external: false # set true if you using external link, see below
+
+- title: sobre
+  url: /sobre/
   external: false # set true if you using external link, see below
 
 # Example:
