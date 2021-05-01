@@ -4,7 +4,7 @@ title: "Criando sua primeira aplicação React 👨‍💻"
 tags: [reactjs, frontend, programação, javascript]
 excerpt: "Criar uma aplicação React nunca foi tão fácil"
 date: 2021-03-18 00:25:55
-permalink: /writing/:title
+permalink: /:title
 comments: true
 ---
 
