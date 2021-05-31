@@ -24,9 +24,9 @@ Sem JSX:
 
 {% highlight javascript %}
 React.createElement(
-'button',
-{ onClick: () => alert('Cliquei no botão') },
-'Meu botao React'
+  'button',
+  { onClick: () => alert('Cliquei no botão') },
+  'Meu botao React'
 );
 {% endhighlight %}
 
@@ -34,7 +34,7 @@ Com JSX:
 
 {% highlight jsx %}
 <button onClick={() => alert('Cliquei no botão')}>
-Meu botão React
+  Meu botão React
 </button>
 {% endhighlight %}
 
@@ -139,15 +139,15 @@ Como era o componente `Button` sem JSX:
 const e = React.createElement;
 
 class Button extends React.Component {
-constructor(props) {
-super(props);
-this.state = { clicked: false };
-}
+  constructor(props) {
+    super(props);
+    this.state = { clicked: false };
+  }
 
-render() {
-if (this.state.clicked) {
-return 'Voce clicou no botao.';
-}
+  render() {
+    if (this.state.clicked) {
+      return 'Voce clicou no botao.';
+    }
 
     return e(
       'button',
@@ -155,7 +155,7 @@ return 'Voce clicou no botao.';
       'Meu botao React'
     );
 
-}
+  }
 }
 
 const domContainer = document.querySelector('#react-container');
@@ -166,15 +166,15 @@ Com JSX:
 
 {% highlight jsx %}
 class Button extends React.Component {
-constructor(props) {
-super(props);
-this.state = { clicked: false };
-}
+  constructor(props) {
+    super(props);
+    this.state = { clicked: false };
+  }
 
-render() {
-if (this.state.clicked) {
-return 'Voce clicou no botao.';
-}
+  render() {
+    if (this.state.clicked) {
+      return 'Voce clicou no botao.';
+    }
 
     return (
       <button onClick={() => this.setState({ clicked: true })}>
@@ -182,7 +182,7 @@ return 'Voce clicou no botao.';
       </button>
     );
 
-}
+  }
 }
 
 const domContainer = document.querySelector('#react-container');
@@ -195,7 +195,6 @@ Vou agora colocar uma mensagem embaixo do botão e uma _div_ em volta dos dois:
 
 {% highlight jsx %}
 return (
-
   <div>
     <button onClick={() => this.setState({ clicked: true })}>
       Meu botão React
