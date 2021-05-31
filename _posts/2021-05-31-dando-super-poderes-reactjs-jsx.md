@@ -24,9 +24,9 @@ Sem JSX:
 
 {% highlight javascript %}
 React.createElement(
-  'button',
-  { onClick: () => alert('Cliquei no botão') },
-  'Meu botao React'
+'button',
+{ onClick: () => alert('Cliquei no botão') },
+'Meu botao React'
 );
 {% endhighlight %}
 
@@ -34,7 +34,7 @@ Com JSX:
 
 {% highlight jsx %}
 <button onClick={() => alert('Cliquei no botão')}>
-  Meu botão React
+Meu botão React
 </button>
 {% endhighlight %}
 
@@ -74,11 +74,16 @@ Nada mal, hein! 🤓
 ## Adicionando atributos com JSX
 
 Você pode simplesmente utilizar aspas duplas para atributos do tipo _string_:
+
+{% highlight jsx %}
 const element = <div tabIndex="0"></div>
+{% endhighlight %}
 
 E chaves para atributos que são uma expressão:
 
-    const element = <img src={user.avatar} />
+{% highlight jsx %}
+const element = <img src={user.avatar} />
+{% endhighlight %}
 
 Lembrando que atributos devem ser adicionados utilizando _[camelCase](https://en.wikipedia.org/wiki/Camel_case)_!
 
@@ -94,6 +99,7 @@ Se não:
 
 {% highlight jsx %}
 const element = (
+
   <div className="welcome">
     <h1>Seja bem vindo!</h1>
     <p>Estou feliz com a sua presença.</p>
@@ -117,7 +123,11 @@ Como disse anteriormente, JSX não é compreendido pelo browser e por isso preci
 
 Sua instalação exige pouco esforço. Basta copiarmos o seguinte trecho de código na nossa página _HTML_:
 
-`<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>`
+{% highlight html %}
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+{% endhighlight %}
 
 ## Rescrevendo um componente utilizando JSX
 
@@ -129,22 +139,23 @@ Como era o componente `Button` sem JSX:
 const e = React.createElement;
 
 class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { clicked: false };
-  }
+constructor(props) {
+super(props);
+this.state = { clicked: false };
+}
 
-  render() {
-    if (this.state.clicked) {
-      return 'Voce clicou no botao.';
-    }
+render() {
+if (this.state.clicked) {
+return 'Voce clicou no botao.';
+}
 
     return e(
       'button',
       { onClick: () => this.setState({ clicked: true }) },
       'Meu botao React'
     );
-  }
+
+}
 }
 
 const domContainer = document.querySelector('#react-container');
@@ -155,22 +166,23 @@ Com JSX:
 
 {% highlight jsx %}
 class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { clicked: false };
-  }
+constructor(props) {
+super(props);
+this.state = { clicked: false };
+}
 
-  render() {
-    if (this.state.clicked) {
-      return 'Voce clicou no botao.';
-    }
+render() {
+if (this.state.clicked) {
+return 'Voce clicou no botao.';
+}
 
     return (
       <button onClick={() => this.setState({ clicked: true })}>
         Meu botão React
       </button>
     );
-  }
+
+}
 }
 
 const domContainer = document.querySelector('#react-container');
@@ -183,6 +195,7 @@ Vou agora colocar uma mensagem embaixo do botão e uma _div_ em volta dos dois:
 
 {% highlight jsx %}
 return (
+
   <div>
     <button onClick={() => this.setState({ clicked: true })}>
       Meu botão React
