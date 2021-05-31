@@ -18,21 +18,25 @@ Mas, espera aí!! JSX não é JavaScript??
 
 Bom, mais ou menos! JSX é uma sintaxe de extensão para JavaScript. Um [_syntactic sugar_](https://en.wikipedia.org/wiki/Syntactic_sugar). JSX nos permite criar elementos escrevendo menos código e o deixando mais legível. E claro, tem uma pequena curva de aprendizado no início, mas após algumas horas escrever JSX tende a ficar mais natural.
 
-Vaos ao exemplo do [post anterior](https://nelio.me/criando-sua-primeira-aplicacao-react):
+Vamos ao exemplo do [post anterior](https://nelio.me/criando-sua-primeira-aplicacao-react):
 
 Sem JSX:
 
-    React.createElement(
-      'button',
-      { onClick: () => alert('Cliquei no botão') },
-      'Meu botao React'
-    );
+{% highlight javascript %}
+React.createElement(
+  'button',
+  { onClick: () => alert('Cliquei no botão') },
+  'Meu botao React'
+);
+{% endhighlight %}
 
 Com JSX:
 
-    <button onClick={() => alert('Cliquei no botão')}>
-    	Meu botão React
-    </button>
+{% highlight jsx %}
+<button onClick={() => alert('Cliquei no botão')}>
+  Meu botão React
+</button>
+{% endhighlight %}
 
 Reflita por 2 minutinhos e tire suas próprias conclusões. 🧘‍♂️
 
@@ -48,18 +52,22 @@ Você ainda pode escrever React sem JSX (como fizemos no post sobre [como criar 
 
 Renderizar conteúdo dinâmico é algo extremamente comum e JSX sabe bem como fazê-lo. Veja o pedaço de código abaixo:
 
-    const name = 'Nelio';
-    const element = <h1>Hello, {name}</h1>;
+{% highlight jsx %}
+const name = 'Nelio';
+const element = <h1>Hello, {name}</h1>;
 
-    React.DOM.render(element, document.getElementById('root'));
+React.DOM.render(element, document.getElementById('root'));
+{% endhighlight %}
 
 JSX me permitiu colocar a variável _name_ diretamente dentro da tag _h1_. E isso é possível com qualquer expressão JavaScript:
 
-    const receita = 180;
-    const divida = 80;
-    const element = <p>Lucro: R${receita - divida}</p>;
+{% highlight jsx %}
+const receita = 180;
+const divida = 80;
+const element = <p>Lucro: R${receita - divida}</p>;
 
-    React.DOM.render(element, document.getElementById('root'));
+React.DOM.render(element, document.getElementById('root'));
+{% endhighlight %}
 
 Nada mal, hein! 🤓
 
@@ -84,12 +92,14 @@ Se a tag é vazia, não precisamos de uma tag de fechamento. Basta finalizar com
 
 Se não:
 
-    const element = (
-    	<div className="welcome">
-    		<h1>Seja bem vindo!</h1>
-    		<p>Estou feliz com a sua presença.</p>
-    	</div>
-    );
+{% highlight jsx %}
+const element = (
+  <div className="welcome">
+    <h1>Seja bem vindo!</h1>
+    <p>Estou feliz com a sua presença.</p>
+  </div>
+);
+{% endhighlight %}
 
 ## JSX previne ataques XSS (cross-site-scripting)
 
@@ -115,66 +125,72 @@ No [post anterior](https://nelio.me/criando-sua-primeira-aplicacao-react) criei 
 
 Como era o componente `Button` sem JSX:
 
-    const e = React.createElement;
+{% highlight javascript %}
+const e = React.createElement;
 
-    class Button extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = { clicked: false };
-      }
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { clicked: false };
+  }
 
-      render() {
-        if (this.state.clicked) {
-          return 'Voce clicou no botao.';
-        }
-
-        return e(
-          'button',
-          { onClick: () => this.setState({ clicked: true }) },
-          'Meu botao React'
-        );
-      }
+  render() {
+    if (this.state.clicked) {
+      return 'Voce clicou no botao.';
     }
 
-    const domContainer = document.querySelector('#react-container');
-    ReactDOM.render(e(Button), domContainer);
+    return e(
+      'button',
+      { onClick: () => this.setState({ clicked: true }) },
+      'Meu botao React'
+    );
+  }
+}
+
+const domContainer = document.querySelector('#react-container');
+ReactDOM.render(e(Button), domContainer);
+{% endhighlight %}
 
 Com JSX:
 
-    class Button extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = { clicked: false };
-      }
+{% highlight jsx %}
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { clicked: false };
+  }
 
-      render() {
-        if (this.state.clicked) {
-          return 'Voce clicou no botao.';
-        }
-
-        return (
-    	  <button onClick={() => this.setState({ clicked: true })}>
-    		Meu botão React
-    	  </button>
-        );
-      }
+  render() {
+    if (this.state.clicked) {
+      return 'Voce clicou no botao.';
     }
 
-    const domContainer = document.querySelector('#react-container');
-    ReactDOM.render(<Button />, domContainer);
+    return (
+      <button onClick={() => this.setState({ clicked: true })}>
+        Meu botão React
+      </button>
+    );
+  }
+}
+
+const domContainer = document.querySelector('#react-container');
+ReactDOM.render(<Button />, domContainer);
+{% endhighlight %}
 
 Não parece tão diferente assim, certo!? Talvez não para um exemplo tão simples.
 
 Vou agora colocar uma mensagem embaixo do botão e uma _div_ em volta dos dois:
 
-    return (
-      <div>
-        <button onClick={() => this.setState({ clicked: true })}>
-    	  Meu botão React
-        </button>
-        <p>Este botão ao ser clicado muda o estado da página</p>
-      </div>
-    );
+{% highlight jsx %}
+return (
+  <div>
+    <button onClick={() => this.setState({ clicked: true })}>
+      Meu botão React
+    </button>
+    <p>Este botão ao ser clicado muda o estado da página</p>
+  </div>
+);
+{% endhighlight %}
 
 Essa similaridade com _HTML_ deixa tudo muito mais compreensível e de fácil leitura. Criar componente por componente utilizando JavaScript puro não seria um trabalho muito prazeroso.
 
