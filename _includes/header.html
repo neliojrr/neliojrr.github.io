@@ -158,4 +158,14 @@
   <meta name="theme-color" content="#2c2c2c" />
 
   <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <script type="text/javascript">
+    function addPageView() {
+      fetch("https://analytics-bits.vercel.app/api/hello");
+    }
+
+    (function () {
+      addPageView();
+    })();
+  </script>
 </head>
