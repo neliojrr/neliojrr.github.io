@@ -9,13 +9,11 @@ permalink: /:title
 comments: true
 ---
 
-# Configurando um servidor local para desenvolvimento frontend
-
 Quando entramos no mundo de desenvolvimento web eventualmente vamos precisar configurar um servidor local. É muito comum no início do aprendizado, apenas abrir arquivos *HTML* no navegador. Mas eu, como desenvolvedor frontend, não posso simplesmente continuar abrindo o arquivo *HTML* diretamente do meu diretório em uma página web? Sim! No entanto, existem limitações que me impediria de criar um aplicativo ou uma página mais complexa.
 
 Um servidor local me aproxima do ambiente de produção - ambiente o qual irá hospedar meu aplicativo (ou página) e será acessado pelos usuários finais - e também, habilita o browser a utilizar mais recursos do que se rodo o arquivo de um diretório comum.
 
-## nstalando o servidor
+## Instalando o servidor
 
 Existem inúmeros servidores e frameworks web gratuitos e de fácil instalação. Dentre os mais famosos posso citar: [Apache](https://apache.org/), [nginx](https://nginx.org/en/) e [Puma](https://puma.io/). Cada um com a sua especificidade.
 
@@ -29,12 +27,12 @@ Existem algumas maneiras de instalar o *Node.js*. É possível realizar a instal
 
 Após a instalação do *nvm* abri o terminal e digitei o seguinte comando para instalar a versão mais recente do *Node.js*:
 
-	nvm install node
+`nvm install node`
 
 Depois:
 
-	node -v
-	
+`node -v`
+
 E a versão instalada foi `v14.0.0`.
 
 Pronto, agora posso seguir com a instalação do *Express*.
@@ -45,7 +43,7 @@ Pronto, agora posso seguir com a instalação do *Express*.
 
 No site oficial existem diferentes maneiras de como instalar o yarn, baseado no sistema operacional. Como estou em um macOS instalei utilizando o *Homebrew*:
 
-	brew install yarn
+`brew install yarn`
 
 *yarn* instalado! Agora posso enfim instalar o *Express*.
 
@@ -53,19 +51,21 @@ No site oficial existem diferentes maneiras de como instalar o yarn, baseado no 
 
 Primeiro, através do terminal, vou criar uma nova pasta para a minha aplicação:
 
-	mkdir ~/react-app
-	cd ~/react-app
-	
+```
+mkdir ~/react-app
+cd ~/react-app
+```
+
 Já dentro da pasta criada, vou iniciar o *yarn*
 
-	yarn init -y
-	
+`yarn init -y`
+
 Este comando cria o arquivo `package.json`, responsável por organizar os pacotes instalados através do *yarn*.
 
 Agora, vou instalar o *Express*
 
-	yarn add express
-	
+`yarn add express`
+
 *Express* foi instalado com sucesso!
 
 ## Configurando e iniciando meu servidor
@@ -73,22 +73,22 @@ Agora, vou instalar o *Express*
 Com o *Express* instalado vou criar o arquivo responsável por configurar e iniciar o servidor que irá servir o meu aplicativo *React*. Ainda dentro da pasta `react-app` irei criar o arquivo `index.js`:
 
 {% highlight javascript %}
-	// importa o framework Express
-	const express = require('express');
-	// cria uma instância do express
-	const app = express();
-	
-	// Cria uma regra para requisições GET à pagina inicial
-	// do aplicativo
-	app.get('/', (req, res) => {
-		// Envia uma resposta ao navegador
-		res.send('Do nosso servidor recém criado');
-	});
-	
-	// Inicia o servidor Express na porta 3000
-	app.listen(3000, () => {
-		console.log('servidor iniciado na porta 3000');
-	});
+// importa o framework Express
+const express = require('express');
+// cria uma instância do express
+const app = express();
+
+// Cria uma regra para requisições GET à pagina inicial
+// do aplicativo
+app.get('/', (req, res) => {
+  // Envia uma resposta ao navegador
+  res.send('Do nosso servidor recém criado');
+});
+
+// Inicia o servidor Express na porta 3000
+app.listen(3000, () => {
+  console.log('servidor iniciado na porta 3000');
+});
 {% endhighlight %}
 
 Adicionei comentários ao código acima para que fique compreensível cada linha. Mas, este simples trecho de código, é responsável por servir o nosso aplicativo *React*.
@@ -112,8 +112,8 @@ O meu *package.json* até o momento está assim:
 
 Adicionando o trecho `"start": "node index.js"` me permite iniciar o servidor através do seguinte comando no terminal:
 
-	yarn start
-	
+`yarn start`
+
 E esta foi a resposta:
 
 ![]({{ site.url }}/assets/img/screenshot-09-20-1.png)
@@ -137,19 +137,19 @@ Primeiro, vou criar uma pasta chamada `public/` que vai conter meu arquivo `inde
 Então, vou copiar o *index.html* para a pasta `public`, que está dessa maneira:
 
 {% highlight html %}
-	<html>
-	  <head>
-	  </head>
-	  </body>
-	    <div id="react-container"></div>
+<html>
+  <head>
+  </head>
+  </body>
+    <div id="react-container"></div>
 
-	    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-	    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-	    
-	    <!-- Load our React component. -->
-	    <script src="Button.js"></script>
-	  </body>
-	</html>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- Load our React component. -->
+    <script src="Button.js"></script>
+  </body>
+</html>
 {% endhighlight %}
 
 Feito isso, preciso agora alterar o arquivo `index.js` responsável por rodar o nosso servidor para que ao invés de retornar uma simples mensagem, ele possa retornar o nosso arquivo `index.html`.
@@ -157,13 +157,13 @@ Feito isso, preciso agora alterar o arquivo `index.js` responsável por rodar o 
 Adiciono o *import* da modulo `path` que é necessário para ler as pastas do sistema:
 
 {% highlight javascript %}
-	const path = require("path");
+const path = require("path");
 {% endhighlight %}
 
 E depois, substituo a mensagem de retorno pelo caminho do nosso arquivo `index.html`:
 
 {% highlight javascript %}
-	res.sendFile(path.join(__dirname, "public", "index.html"));
+res.sendFile(path.join(__dirname, "public", "index.html"));
 {% endhighlight %}
 
 Ficando assim:
@@ -199,7 +199,7 @@ Com um pouco de pesquisa descobri que da maneira como carregamos o nosso *index.
 Ainda é preciso fazer uma pequena mudança. Vou substituir a linha com o `sendFile` por esta:
 
 {% highlight javascript %}
-	app.use(express.static("public"));
+app.use(express.static("public"));
 {% endhighlight %}
 
 E ficou assim:
