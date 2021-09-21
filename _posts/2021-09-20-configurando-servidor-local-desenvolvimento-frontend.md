@@ -9,6 +9,8 @@ permalink: /:title
 comments: true
 ---
 
+![]({{ site.url }}/assets/img/first-09-20.jpeg)
+
 Quando entramos no mundo de desenvolvimento web eventualmente vamos precisar configurar um servidor local. É muito comum no início do aprendizado, apenas abrir arquivos *HTML* no navegador. Mas eu, como desenvolvedor frontend, não posso simplesmente continuar abrindo o arquivo *HTML* diretamente do meu diretório em uma página web? Sim! No entanto, existem limitações que me impediria de criar um aplicativo ou uma página mais complexa.
 
 Um servidor local me aproxima do ambiente de produção - ambiente o qual irá hospedar meu aplicativo (ou página) e será acessado pelos usuários finais - e também, habilita o browser a utilizar mais recursos do que se rodo o arquivo de um diretório comum.
