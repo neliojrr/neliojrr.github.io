@@ -29,11 +29,15 @@ Existem algumas maneiras de instalar o *Node.js*. É possível realizar a instal
 
 Após a instalação do *nvm* abri o terminal e digitei o seguinte comando para instalar a versão mais recente do *Node.js*:
 
-`nvm install node`
+```
+nvm install node
+```
 
 Depois:
 
-`node -v`
+```
+node -v
+```
 
 E a versão instalada foi `v14.0.0`.
 
@@ -45,7 +49,9 @@ Pronto, agora posso seguir com a instalação do *Express*.
 
 No site oficial existem diferentes maneiras de como instalar o yarn, baseado no sistema operacional. Como estou em um macOS instalei utilizando o *Homebrew*:
 
-`brew install yarn`
+```
+brew install yarn
+```
 
 *yarn* instalado! Agora posso enfim instalar o *Express*.
 
@@ -60,13 +66,17 @@ cd ~/react-app
 
 Já dentro da pasta criada, vou iniciar o *yarn*
 
-`yarn init -y`
+```
+yarn init -y
+```
 
 Este comando cria o arquivo `package.json`, responsável por organizar os pacotes instalados através do *yarn*.
 
 Agora, vou instalar o *Express*
 
-`yarn add express`
+```
+yarn add express
+```
 
 *Express* foi instalado com sucesso!
 
@@ -114,7 +124,9 @@ O meu *package.json* até o momento está assim:
 
 Adicionando o trecho `"start": "node index.js"` me permite iniciar o servidor através do seguinte comando no terminal:
 
-`yarn start`
+```
+yarn start
+```
 
 E esta foi a resposta:
 
