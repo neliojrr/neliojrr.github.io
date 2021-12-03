@@ -234,7 +234,7 @@ yarn add webpack webpack-cli --dev
 Instale o [Babel](https://babeljs.io/):
 
 ```
-yarn add @babel/core @babel/preset-env @babel/preset-react
+yarn add @babel/core @babel/preset-env @babel/preset-react --dev
 ```
 
 Crie uma pasta chamada `dist` na raiz do seu projeto:
