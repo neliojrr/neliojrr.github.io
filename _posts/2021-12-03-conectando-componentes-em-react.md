@@ -14,7 +14,7 @@ Uma das grandes vantagens de adotar a biblioteca [React](https://reactjs.org) é
 
 Você pode reutilizar componentes inúmeras vezes, evitando a repetição de código desnecessária e facilitando a manutenção do mesmo. E isso se dá com alguns simples passos.
 
-No [primeiro post](https://nelio.me/criando-sua-primeira-aplicacao-react) criei uma aplicação React bem simples. No [último post](https://www.nelio.me/dando-super-poderes-reactjs-jsx) evoluí a aplicação inicial com o uso de JSX. Agora vou conectar diferentes componentes e formar uma aplicação um pouco mais complexa. Para isso, vou criar um simples formulári com um _input_ para email, outro para senha e um botão de "Enviar".
+No [primeiro post](https://nelio.me/criando-sua-primeira-aplicacao-react) criei uma aplicação React bem simples. No [último post](https://www.nelio.me/dando-super-poderes-reactjs-jsx) evoluí a aplicação inicial com o uso de JSX. Agora vou conectar diferentes componentes e formar uma aplicação um pouco mais complexa. Para isso, vou criar um simples formulário com um _input_ para email, outro para senha e um botão de "Enviar".
 
 Vamos dar uma olhada como está o nosso arquivo _index.html_ do [post anterior](https://www.nelio.me/dando-super-poderes-reactjs-jsx):
 
@@ -35,7 +35,9 @@ Vamos dar uma olhada como está o nosso arquivo _index.html_ do [post anterior](
 </html>
 {% endhighlight %}
 
-Até o momento tenho apenas um único componente: `Button.js`. Para que o formulário possa ser criado vou precisar de mais 3 componentes:
+Até o momento tenho apenas um único componente: `Button.js`.
+
+Para que o formulário possa ser criado vou precisar de mais 3 componentes:
 
 - Input email
 - Input password
@@ -45,7 +47,9 @@ Até o momento tenho apenas um único componente: `Button.js`. Para que o formul
 
 No entanto, o nosso objetivo hoje é criar componentes que possam ser reutilizados.
 
-Um componente _Email_ pode ser utilizado em várias partes de uma aplicação, assim como um componente _Button_. Porém, se eu fizer tudo em um só componente veremos que ele não vai ser tão reutilizável assim, pois terá características exclusivas. Vamos ver na prática como isso se dá!?
+Um componente _Email_ pode ser utilizado em várias partes de uma aplicação, assim como um componente _Button_. Porém, se eu fizer tudo em um só componente veremos que ele não vai ser tão reutilizável assim, pois terá características exclusivas.
+
+Vamos ver na prática como isso se dá!?
 
 ## Iniciando o servidor
 
@@ -125,7 +129,7 @@ Na última linha, escrevi algo que ainda não tinha mostrado.
 
 O `export` diz ao compilador que este arquivo pode ser importado dentro de algum outro.
 
-O `default` deixa claro qual classe (função ou variável) será, por padrão, chamada quando for importada. No caso acima a class `EmailInput`.
+O `default` deixa claro qual classe (função ou variável) será, por padrão, chamada quando for importada. No caso acima a classe `EmailInput`.
 
 ## Criando o campo _password_
 
@@ -154,7 +158,7 @@ E por último, vou criar o componente que irá importar `EmailInput`, `PasswordI
 
 ## Criando o formulário
 
-Por último, preciso de um componente que seja capaz de renderizar os outros dois componentes criados e, também, o componente `Button`, criado anteriormente.
+E por fim, preciso de um componente que seja capaz de renderizar os outros dois componentes criados e, também, o componente `Button` criado anteriormente.
 
 Vou chamá-lo de `Form.js`:
 
@@ -225,6 +229,12 @@ Vamos à prática. Instale o webpack:
 
 ```
 yarn add webpack webpack-cli --dev
+```
+
+Instale o [Babel](https://babeljs.io/):
+
+```
+yarn add @babel/core @babel/preset-env @babel/preset-react
 ```
 
 Crie uma pasta chamada `dist` na raiz do seu projeto:
@@ -303,13 +313,12 @@ Será preciso uma pequena alteração no meu arquivo `/dist/index.html` lá do c
   <head>
   </head>
   <body>
-	  <div id="react-container"></div>
+    <div id="react-container"></div>
 
-	  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-	  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-	  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 
-	  <script src="./main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
 {% endhighlight %}
