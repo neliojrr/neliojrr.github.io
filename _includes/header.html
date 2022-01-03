@@ -159,13 +159,6 @@
 
   <link rel="stylesheet" href="/assets/css/style.css" />
 
-  <script type="text/javascript">
-    function addPageView() {
-      fetch("https://analytics-bits.vercel.app/api/hello");
-    }
-
-    (function () {
-      addPageView();
-    })();
-  </script>
+  {% if jekyll.environment == 'production' and site.google_analytics %} {%
+  include analytics.html %} {% endif %}
 </head>
