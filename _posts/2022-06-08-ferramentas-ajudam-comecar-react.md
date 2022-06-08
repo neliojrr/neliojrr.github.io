@@ -10,8 +10,6 @@ comments: true
 
 ![]({{ site.url }}/assets/img/cover-2022-06-08.jpeg)
 
-# Ferramentas que te ajudam a começar com *React*
-
 Criar seu primeiro aplicativo com *React* pode ser uma tarefa árdua e cansativa. Inclusive, muito antes de escrever a primeira linha de código. Isso porque antes mesmo de criar algum componente, o desenvolvimento frontend exige várias configurações iniciais. E isso pode se tornar pesadelo.
 
 Vimos em alguns outros [posts](https://www.nelio.me/conectando-componentes-em-react) sobre a necessidade de ferramentas como um [servidor web](https://expressjs.com/pt-br/), [webpack](https://webpack.js.org/), [babel](https://babeljs.io/), [lint](https://eslint.org/) e várias outras que nem mesmo comentei sobre. Já adianto que algumas delas não são divertidas de configurar. E ter todo esse arsenal de ferramentas para estudar logo de cara, pode ser bastante desmotivador.
