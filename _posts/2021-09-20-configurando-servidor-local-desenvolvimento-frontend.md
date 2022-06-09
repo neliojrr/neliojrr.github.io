@@ -7,6 +7,7 @@ local"
 date: 2021-09-20 00:25:55
 permalink: /:title
 comments: true
+tweet: true
 ---
 
 ![]({{ site.url }}/assets/img/first-09-20.jpeg)

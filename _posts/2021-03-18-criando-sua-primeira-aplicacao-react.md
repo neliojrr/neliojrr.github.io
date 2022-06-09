@@ -7,6 +7,7 @@ date: 2021-03-18 00:25:55
 permalink: /:title
 redirect_from: /writing/criando-sua-primeira-aplicacao-react/
 comments: true
+tweet: true
 ---
 
 # Criando a sua primeira aplicação React

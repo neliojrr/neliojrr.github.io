@@ -6,6 +6,7 @@ excerpt: "Criando uma aplicação com múltiplos componentes"
 date: 2021-12-03 14:25:55
 permalink: /:title
 comments: true
+tweet: true
 ---
 
 ![]({{ site.url }}/assets/img/cover-12-03.jpeg)

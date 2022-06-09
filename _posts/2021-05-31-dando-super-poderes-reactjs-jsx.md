@@ -6,6 +6,7 @@ excerpt: "Como JSX te ajuda a criar aplicações ReactJS melhores"
 date: 2021-05-31 00:25:55
 permalink: /:title
 comments: true
+tweet: true
 ---
 
 # Dando super poderes ao ReactJS com JSX
