@@ -6,6 +6,7 @@ excerpt: "Alguns caminhos possíveis no seu começo com React"
 date: 2022-06-08 17:05:55
 permalink: /:title
 comments: true
+tweet: true
 ---
 
 ![]({{ site.url }}/assets/img/cover-2022-06-08.jpeg)
