@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React - Variáveis de estado - *setState* e *useState* 🤩"
+title: "React - Variáveis de estado - 'setState' e 'useState' 🤩"
 tags: [frontend, programação, javascript, react]
 excerpt: "Entendendo como funcionam as variáves de estado em React."
 date: 2022-08-28 17:00:00
@@ -10,8 +10,6 @@ tweet: true
 ---
 
 ![]({{ site.url }}/assets/img/blog-set-state.jpeg)
-
-# React - Variáveis de estado - `setState` e `useState`
 
 Uma das vantagens mais legais de *[React](https://reactjs.org/)* é poder controlar o estado de um único componente de sua aplicação de um jeito simples e direto. Isso inclusive sem influenciar o estado de outros componentes. Tal ~~mágica~~ é um conceito que deve ser bem compreendido, a fim de construir aplicativos mais complexos e robustos.
 
@@ -117,6 +115,8 @@ O componente que acabei de criar é chamado de *[controlled component](https://r
 Componentes que apresentam elementos de formulário, mas seus valores não são controlados por variáveis de estado, são chamados de *uncontrolled components*.
 
 ## E tudo virou função (e *hooks*)
+
+![]({{ site.url }}/assets/img/blog-use-state.jpeg)
 
 A introdução dos *[hooks](https://reactjs.org/docs/hooks-intro.html)* nos deu uma nova alternativa de como escrever e controlar as variáveis de estado de um componente. Na minha opinião, foi uma melhora muito grande. A começar pelo fato de (na maioria dos casos) não haver a necessidade de criar componentes classe, mas apenas funções.
 
