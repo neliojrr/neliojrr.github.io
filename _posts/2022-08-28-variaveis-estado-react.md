@@ -2,6 +2,7 @@
 layout: post
 image: "/assets/img/blog-set-state.jpeg"
 title: "React - Variáveis de estado - 'setState' e 'useState' 🤩"
+description: "Entendendo como funcionam as variáves de estado em React."
 tags: [frontend, programação, javascript, react]
 excerpt: "Entendendo como funcionam as variáves de estado em React."
 date: 2022-08-28 17:00:00
