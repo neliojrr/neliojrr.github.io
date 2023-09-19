@@ -201,3 +201,5 @@ Por exemplo, quando utilizamos a ferramenta Jira, é possível compartilhar uma 
 
 Aproveite então desta técnica, utilize a sua criatividade e faça páginas com melhor usabilidade.
 
+
+> Veja o código deste post [aqui](https://github.com/neliojrr/blog-posts/tree/main/persistindo-dados-na-url)
