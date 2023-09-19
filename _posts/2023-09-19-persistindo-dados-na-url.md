@@ -145,7 +145,7 @@ const headerClick = (header) => {
 };
 {% endhighlight %}
 
-Na primeira linha recupero todas a variáveis de URL disponíveis, ou seja, tudo do tipo: `?variavel=10`.
+Na primeira linha recupero todas a variáveis de URL disponíveis, ou seja, tudo do tipo: `?variavel=1`.
 
 Na segunda linha definimos o parâmetro `sort` com o valor do cabeçalho clicado. Ex: `?sort=name`.
 
