@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.3.2"
+gem 'jekyll', '~> 4.3.2'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 
@@ -18,12 +18,13 @@ gem "jekyll", "~> 4.3.2"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-feed', '~> 0.13'
-  gem 'jekyll-sitemap', '~> 1.4'
+  gem 'jekyll-codesandbox', '~> 0.1.6'
   gem 'jekyll-compose', '~> 0.12.0'
+  gem 'jekyll-feed', '~> 0.13'
   gem 'jekyll-postfiles', '~> 3.1'
-  gem 'jekyll-seo-tag'
   gem 'jekyll-redirect-from'
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-sitemap', '~> 1.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

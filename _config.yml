@@ -64,9 +64,6 @@ jekyll_compose:
 # Homepage limit posts
 number_of_posts: 25
 
-# Comments
-disqus_shortname: nelio
-
 # Build settings
 # theme: klise
 sass:
