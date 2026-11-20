@@ -5,3 +5,4 @@ _site/
 .jekyll-metadata
 _drafts
 klise-*.gem
+/.seo/runs/

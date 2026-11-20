@@ -1,0 +1,106 @@
+# SEO pipeline settings for this app. Paths are relative to the app folder.
+site_url: "https://nelio.me"     # e.g. https://myapp.com
+language: pt-BR                  # article language; must exist in pipeline/slop-patterns.yaml
+product_source_dirs: []          # extra folders that define the product (e.g. the app's repo)
+blog_dir: "_posts"               # e.g. src/content/blog
+blog_url_prefix: /               # article URL = site_url + blog_url_prefix + slug
+build_command: "bundle exec jekyll build" # e.g. npm run build
+deploy_command: ""               # empty = deploys from git; article left uncommitted
+quality_threshold: 80
+max_revisions: 3
+model: claude-opus-5-5
+# Site-specific instructions for step 7: file format, where to register the
+# article, which checks to run. Empty = write blog_dir/<slug>.md like existing posts.
+publishing_notes: |
+  Jekyll 4 site (theme Klisé), deployed from git. Audience: Portuguese-speaking,
+  mostly Brazilian, beginners in web development learning React and frontend
+  tooling; write in Brazilian Portuguese, first person, informal and practical,
+  like the existing tutorials.
+
+  File: _posts/YYYY-MM-DD-<slug>.md (publication date + slug). Slug: lowercase
+  Portuguese words, hyphens, no accents (e.g. persistindo-dados-na-url).
+  Public URL: https://nelio.me/<slug> (no trailing slash, no /blog/ prefix).
+
+  Model the file on _posts/2023-09-19-persistindo-dados-na-url.md. Frontmatter,
+  in this order:
+    ---
+    layout: post
+    image: "/assets/img/<file>"    # only if image_notes gives the article an image; else omit
+    title: "<title>"               # house style often ends the title with one emoji
+    description: "<meta description, max 160 chars; the theme truncates at 200>"
+    tags: [frontend, programação, javascript, react]
+    excerpt: "<one sentence, may repeat the description>"
+    date: YYYY-MM-DD HH:MM:SS
+    permalink: /:title
+    comments: true
+    tweet: true
+    ---
+  Reuse existing lowercase tags where they fit (frontend, programação,
+  javascript, react, reactjs, jsx, componentes, servidor, express, yarn, npm,
+  offtopic, life). Never set project: true (that lists the post on /projetos/)
+  and never add redirect_from.
+
+  Body: the layout already renders the title as the H1, so do not start with
+  a "# Title" line; use ## for sections and ### for subsections. Code goes in
+  {% highlight jsx %} ... {% endhighlight %} blocks (html, js, bash, jsx) like
+  recent posts. Posts go through Liquid: wrap any code containing {{ or {% (e.g.
+  JSX style={{ ... }}) in {% raw %} ... {% endraw %} or the build breaks. Links
+  are plain inline markdown; link to other posts with the absolute URL
+  https://nelio.me/<slug> (e.g. https://nelio.me/criando-sua-primeira-aplicacao-react).
+  Use *italics* for English technical terms in Portuguese text.
+
+  No index or registry to edit: the home page, /arquivo/, /tags/, the RSS feed,
+  the sitemap and assets/search.json are generated from _posts automatically.
+
+  FAQ: a "## Perguntas frequentes" section near the end, each question as a
+  "### <pergunta>?" heading followed by a plain paragraph answer. No FAQ schema
+  or plugin exists; do not add JSON-LD.
+
+  Length: the site has no tests and enforces no limits; existing tutorials run
+  600-1,800 words. Keep the description under 160 characters.
+
+  Before publishing, `bundle exec jekyll build` must finish without errors or
+  Liquid warnings, and _site/<slug>.html must exist. There is no test suite,
+  linter or CI in the repo.
+# Where the article's images come from and how a page shows them: the site's
+# own library of the product's real output or screenshots, the component or
+# markup, and what a caption must never claim. Empty = the site has no images
+# of its own, and the article goes without.
+image_notes: |
+  The site has no product screenshot library. Its own images are a few
+  screenshots in assets/img/ of the output of code from specific older
+  tutorials (each id is the file name):
+    - screenshot-1.png: blank browser page from the first index.html (post criando-sua-primeira-aplicacao-react)
+    - screenshot-09-20-1.png: terminal running `yarn start`, "servidor iniciado na porta 3000" (post configurando-servidor-local-desenvolvimento-frontend)
+    - screenshot-09-20-2.png, screenshot-09-20-3.png, screenshot-09-20-4.gif: browser output of that Express server tutorial
+    - screen-shot-2021-12-03.png, screen-shot-2021-12-03_2.png: the "Meu primeiro formulário" React form (Email, Senha, Enviar) on localhost:5000 (post conectando-componentes-em-react)
+    - persistindo-dados-url-1.png to -4.png: the people list (ID, NAME, AGE, CITY), the header click log and the ?sort=name URL (post persistindo-dados-na-url)
+    - SuperFaxScreenShot.png: SuperFax web app, 2014 (project post superfax)
+  Use one only when the article walks through that same example code, and link
+  to the original post next to it. The large JPEG photos (cover-*.jpeg,
+  first-09-20.jpeg, blog-set-state.jpeg, blog-use-state.jpeg,
+  persistindo-dados-url-0.jpeg, step-away-from-your-phone-*.jpeg) are stock-style
+  cover photos, not the site's own output: never use them.
+
+  Markup: the theme has no figure or caption component. Put the image on its
+  own line, with a blank line before and after:
+    ![<descriptive alt text in Portuguese>]({{ site.url }}/assets/img/<file>)
+  and write the caption as the sentence just before it (e.g. "O resultado é:").
+  To make an image the preview (og:image/twitter:image), set frontmatter
+  image: "/assets/img/<file>".
+
+  A caption or alt text must never claim the screenshot shows the new
+  article's code unless the code is identical, never call it recent or current
+  (they date from 2014-2023), and never present SuperFax as a live or
+  available product.
+permission_mode: auto            # Claude Code permission mode for the agent
+# Search Console and IndexNow (see the README).
+gsc_property: ""                 # empty = auto: sc-domain:<host>, else a URL-prefix property for the host
+indexnow_key: "0eecee42161b636a512ea2d0badaba1a"                 # set by `seo-pipeline indexnow setup`
+indexnow_key_dir: "."             # folder served at the site root that holds <key>.txt (e.g. public)
+# Weekly audit and optimization (see the README). The preview is audited before
+# and after the optimize agent's changes, and a new error stops its PR; empty =
+# the agent checks with the build only.
+preview_command: ""              # builds and serves the site locally, e.g. npm run build && npm run start -- -p 4417
+preview_url: ""                  # where preview_command serves it, e.g. http://127.0.0.1:4417
+audit_max_pages: 500             # pages the audit crawls at most
